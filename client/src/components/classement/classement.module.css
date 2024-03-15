@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tableBody {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+
+.tableBody::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.tableBody::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.tableBody:hover:-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.tableBody table {
+  width: 100%;
+}
+
+.tableBody table,
+.tableBody table th,
+.tableBody table td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: center;
+}
+
+.tableBody table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.tableBody tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+.TableBody tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+
+.tableBody tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.tableBody tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+.tableBody tbody tr td,
+.tableBody tbody tr td p,
+.tableBody tbody tr td img {
+  transition: 0.2s ease-in-out;
+}
+
+.tableBody tbody tr.hide td,
+.tableBody tbody tr.hide td p {
+  padding: 0;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+.tableBody tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+.desc {
+  font-size: 16px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.club {
+  width: 200px;
+}
